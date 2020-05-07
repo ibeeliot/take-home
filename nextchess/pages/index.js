@@ -1,6 +1,5 @@
 import Nav from '../components/Nav';
 import Chessboard from '../components/chessBoard';
-import '../styles/all.scss';
 
 const IndexPage = () => (
 	<>

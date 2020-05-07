@@ -1,31 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import Rows from './rows';
-import '../styles/all.scss';
 
 const Chessboard = () => {
 	// prop drill
 	const [input, setInput] = useState(0);
-	const [number, setNumber] = useState(input);
-	const [board, setBoard] = useState([]);
-
-	const reChess = () => {
-		setNumber(input);
-	};
-
+	const [number, setNumber] = useState(0);
+	// const [board, setBoard] = useState([]);
 	return (
 		<>
-			<Rows input={input}></Rows>
-			<div className='test'>
+			<Rows input={number}></Rows>
+			<div>
 				<input
 					onChange={(e) => {
 						setInput(e.target.value);
 					}}
 				></input>
+				<style jsx>{`
+					.saveBtn {
+						height: 21px;
+						width: 60px;
+						margin-top: px;
+					}
+				`}</style>
 				<button
-					onSubmit={() => {
-						reChess();
+					className='saveBtn'
+					onClick={() => {
+						setNumber(input);
+						console.log(number);
 					}}
-				></button>
+				>
+					ENTER
+				</button>
 			</div>
 			<h1>TEST</h1>
 		</>

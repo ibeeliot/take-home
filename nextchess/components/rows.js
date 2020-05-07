@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Squares from './squares';
-import '../styles/all.scss';
+
 const Rows = ({ input }) => {
 	// const [rows, setRows] = useState([]);
 	const rows = [];
